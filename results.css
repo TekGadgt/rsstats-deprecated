@@ -1,0 +1,156 @@
+body {
+    background-color: #e6e6e6;
+}
+
+#app {
+    height: calc(100% - 112px);
+    overflow-y: scroll;
+}
+
+.card {
+    padding: 0;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    filter: drop-shadow(0 0 0.15rem black);
+}
+
+#mainheading {
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+#mainheading a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+#tablecontainer1 {
+    margin: 0px 15px 15px 15px;
+}
+
+#tablecontainer1 #profileTable {
+    width: 100%;
+    margin-top: 0;
+}
+
+.LoggedIn {
+    color: red;
+}
+
+#tablecontainer2 {
+    margin: 0px 15px 15px 15px;
+}
+
+#tablecontainer2 #questTable {
+    width: 100%;
+    margin-top: 50px;
+}
+
+#tablecontainer3 {
+    margin: 0px 15px 15px 15px;
+}
+
+#tablecontainer3 #comparisonTable {
+    width: 50% !important;
+    margin: auto;
+    margin-top: 0;
+}
+
+.page-link {
+    color: black !important;
+}
+
+.page-link:hover {
+    color: black !important;
+}
+
+.page-item.disabled .page-link {
+    color: #6c757d !important;
+}
+
+#footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+#footerText {
+    text-align: center;
+    margin: auto;
+}
+
+.table thead th {
+    border: none;
+}
+
+.table td, .table th {
+    vertical-align: middle !important;
+    text-align: center !important;
+    border: none;
+}
+
+.table td.table-data-left, .table th.table-data-left {
+    text-align: left !important;
+}
+
+.table td.table-data-right, .table th.table-data-right {
+    text-align: right !important;
+}
+
+.quest-complete {
+    color: green;
+}
+
+.quest-started {
+    color: #d8b900;
+}
+
+.quest-not-started {
+    color: red;
+}
+
+.novice {
+    color: blue;
+    margin-bottom: 0;
+}
+
+.intermediate {
+    color: green;
+    margin-bottom: 0;
+}
+
+.experienced {
+    color: #d8b900;
+    margin-bottom: 0;
+}
+
+.master {
+    color: darkorange;
+    margin-bottom: 0;
+}
+
+.grandmaster {
+    color: red;
+    margin-bottom: 0;
+}
+
+.special {
+    color: purple;
+    margin-bottom: 0;
+}
+
+.not-bold {
+    font-weight: 400 !important;
+}
+
+.win {
+    color: green !important;
+}
+
+.lose {
+    color: red !important;
+}

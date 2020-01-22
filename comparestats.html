@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="bootstrap.min.css" />
+	<title>RS3 Stat Comparison</title>
+	<style>
+		body {
+			background-color: #e6e6e6;
+		}
+
+		#footer {
+			position: fixed;
+			left: 0;
+			bottom: 0;
+			width: 100%;
+		}
+
+		#footerText {
+			text-align: center;
+			margin: auto;
+		}
+
+		#uname2label {
+			margin-top: 10px;
+		}
+	</style>
+</head>
+
+<body>
+	<nav class="navbar navbar-expand-lg sticky-top navbar-dark bg-dark">
+		<a class="navbar-brand" href="/">
+			<img src="rsz_rs_rune_final30x30.png" width="30" height="30" class="d-inline-block align-top" alt="" />
+			Stats
+		</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+			aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class="navbar-nav mr-auto">
+				<li class="nav-item">
+					<a class="nav-link" href="/comparestats.html">Compare Stats</a>
+				</li>
+				<li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+						data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						Resources
+					</a>
+					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+						<a class="dropdown-item" href="https://apps.runescape.com/runemetrics/app/welcome"
+							target="_blank">RuneMetrics</a>
+						<a class="dropdown-item" href="https://runescape.wiki/" target="_blank">Runescape Wiki</a>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</nav>
+	<div class="container py-5">
+		<div class="row pb-3">
+			<div class="col-md-2"></div>
+			<div class="col-md-20 text-center">
+				<h4 class="display-4">Welcome to RS3 Stat Comparison</h4>
+				<p class="lead">
+					The form below can be used to compare your current stats in RS3 to a
+					fellow players.
+				</p>
+				<p>
+					Currently, this will display each of your Rank, Total Skill Level, Total
+					Experience, Combat Level, and Total Completed Quests.
+				</p>
+			</div>
+			<div class="col-md-2"></div>
+		</div>
+		<div class="row">
+			<div class="col-md-24">
+				<div class="row">
+					<div class="col-md-12 mx-auto">
+						<div class="card"
+							style="padding: 0; margin-top: 15px; margin-bottom: 15px; border-radius: 10px; filter: drop-shadow(0 0 0.15rem black);">
+							<div class="card-header">
+								<h3 class="mb-0">Enter Usernames:</h3>
+							</div>
+							<div class="card-body">
+								<form class="form" role="form" autocomplete="off" id="formUser"
+									action="comparestats.php" novalidate="" method="get">
+									<div class="form-group">
+										<label id="uname1label" for="uname1">Username 1</label>
+										<input type="text" class="form-control form-control-lg rounded-0" name="user1"
+											id="uname1" required="" />
+										<label id="uname2label" for="uname2">Username 2</label>
+										<input type="text" class="form-control form-control-lg rounded-0" name="user2"
+											id="uname2" required="" />
+										<div class="invalid-feedback">
+											Usernames are required.
+										</div>
+									</div>
+									<button type="submit" class="btn btn-success btn-lg float-right" id="btnUser">
+										Submit
+									</button>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<nav id="footer" class="navbar navbar-expand-lg navbar-dark bg-dark">
+		<span id="footerText" class="navbar-brand">Created by Resonance Media</span>
+	</nav>
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"
+		integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+	<script>
+		$("#btnUser").click(function (event) {
+			var form = $("#formUser");
+			if (form[0].checkValidity() === false) {
+				event.preventDefault();
+				event.stopPropagation();
+			}
+			form.addClass("was-validated");
+		});
+	</script>
+</body>
+
+</html>
